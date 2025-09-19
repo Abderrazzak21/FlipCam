@@ -1,126 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/parentCamera">
+    tools:context=".CameraActivity">
 
-    <FrameLayout
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/cameraPreview"
-        >
-    </FrameLayout>
+        android:layout_height="match_parent" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/settingsBar"
-        android:background="@color/settingsBarColor"
-        >
+    <ImageButton
+        android:id="@+id/recordButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:drawable/ic_media_play"
+        android:contentDescription="@string/record_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@+id/flashOn"
-            android:layout_width="@dimen/flashOnWidth"
-            android:layout_height="@dimen/flashOnHeight"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/flashOnLeftMargin"
-            android:layout_weight="0.5"
-            android:background="@color/settingsBarColor"
-            android:scaleType="fitCenter"
-            android:src="@drawable/camera_flash_on"
-            android:contentDescription="@string/flashOn"/>
+    <ImageButton
+        android:id="@+id/switchCameraButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_switch_camera"
+        android:contentDescription="@string/switch_camera_button"
+        app:layout_constraintBottom_toBottomOf="@+id/recordButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recordButton" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/modeLayout"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/modeInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/modeInfoBottomMargin"
-                android:background="@color/modeText"
-                android:text="@string/VIDEO_MODE"
-                android:textColor="@color/settingsBarColor" />
-
-            <TextView
-                android:id="@+id/resInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/turqoise" />
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/settings"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/settingsTopAndBottomMargin"
-            android:layout_marginEnd="@dimen/settingRightMargin"
-            android:layout_marginBottom="@dimen/settingsTopAndBottomMargin"
-            android:layout_weight="0.5"
-            android:background="@drawable/ripple"
-            android:contentDescription="@string/settings"
-            android:onClick="goToSettings"
-            android:scaleType="centerInside"
-            android:src="@drawable/settings_new" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/instantSettingsParent"
-        android:layout_width="@dimen/instantSettingWidth"
-        android:layout_height="120dp"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="80dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="top|center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/toggleAudio"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="30dp"
-            android:onClick="toggleMicrophone"
-            android:src="@drawable/microphone_music_sound_icon" />
-
-        <ImageView
-            android:id="@+id/brightness"
-            android:layout_width="@dimen/brightnessWidth"
-            android:layout_height="@dimen/brightnessHeight"
-            android:onClick="openBrightnessPopup"
-            android:contentDescription="@string/brightnessContentDescription"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/full_brightness" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageHighlight"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:contentDescription="@string/imagePreview"
-        android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/switchModeButton"
+        android.layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_photo_camera"
+        android:contentDescription="@string/switch_mode_button"
+        app:layout_constraintBottom_toBottomOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recordButton" />
 
     <TextView
-        android:id="@+id/selfieCountdown"
+        android:id="@+id/recordingTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="@color/turqoise"
-        android:textSize="120sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

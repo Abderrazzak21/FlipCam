@@ -18,17 +18,18 @@
 
         <activity
             android:name=".PermissionActivity"
-            android:exported="true">
+            android:exported="false" />
+
+        <activity
+            android:name=".CameraActivity"
+            android:exported="true"
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".CameraActivity"
-            android:screenOrientation="nosensor" />
 
         <activity
             android:name=".MediaActivity"
@@ -45,7 +46,7 @@
             android:configChanges="orientation|screenSize" />
         <activity
             android:name=".PhotoSettingsActivity"
-            android:configChanges="orientation|screenSize"
+            android.configChanges="orientation|screenSize"
             android:label="@string/photoSettingsTitle" />
 
         <activity

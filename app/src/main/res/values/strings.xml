@@ -201,8 +201,6 @@
     <string name="flipCamGallery">FlipCam Gallery</string>
     <string name="galleryCount">%1$d Photos, %2$d Videos</string>
     <string name="content_authority">com.flipcam.data</string>
-    <string name="flashModeNotSupported">Flash Mode %1$s not supported by this camera.</string>
-    <string name="noFrontFaceCamera">Front facing camera not available in this device.</string>
     <string name="flipCamContentDescription">FlipCam Icon</string>
     <string name="placeholderContentDescription">Placeholder Icon</string>
     <string name="uploadFolderDesc">Upload Folder</string>
@@ -229,12 +227,7 @@
     <string name="googleDriveDesc">Google Drive Icon</string>
     <string name="warningSymbol">Warning Message</string>
     <string name="photoSubstitute">Photo substitute</string>
-    <string name="zoomNotSupported">Zoom not supported for this camera.</string>
     <string name="unableToDelete">Unable to delete file</string>
-    <string name="torchMode">Torch</string>
-    <string name="flashOnMode">On</string>
-    <string name="flashOffMode">Off</string>
-    <string name="singleMode">Auto</string>
     <string name="videoResolutionHeading">Video Resolutions</string>
     <string name="videoResolutionSummary">Set the video recording resolution for the camera.</string>
     <string name="videoResHigh">HIGH</string>
@@ -274,15 +267,6 @@
     <string name="videoSettingsTitle">Video Settings</string>
     <string name="flashSetting">FLASH</string>
     <string name="memoryConsumedTitle">Memory Consumed</string>
-    <string name="pausedText">RECORDING PAUSED</string>
-    <string name="timerText">Click START TIMER to start the timer for Front Facing Camera.</string>
-    <string name="startTimerText">START TIMER</string>
-    <string name="cancelText">CANCEL</string>
-    <string name="timerHeader">TIMER</string>
-    <string name="selfieTimerSettingTitle">Front Camera Timer</string>
-    <string name="selfieTimerSettingSummary">Enable Front Camera Timer.</string>
-    <string name="selfieTimerValueSettingTitle">Timer Duration</string>
-    <string name="selfieTimerValueSettingSummary">Set the front camera timer duration (in seconds).</string>
     <string name="folderSelectTitle">Media Location</string>
     <string name="phoneContentDescription">Phone Folder</string>
     <string name="memoryContentDescription">SD Card Folder</string>
@@ -337,4 +321,3 @@
     <string name="fcUserManualLeftSwipeText">Swipe Left to go to next screen.</string>
     <string name="fcUserManualRightSwipeText">Swipe Right to go to previous screen.</string>
 </resources>
-
