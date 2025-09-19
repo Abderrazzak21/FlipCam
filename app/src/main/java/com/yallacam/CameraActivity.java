@@ -1,5 +1,5 @@
 
-package com.flipcam;
+package com.yallacam;
 
 import android.Manifest;
 import android.content.Context;
@@ -22,7 +22,7 @@ import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.flipcam.cameramanager.CameraXManager;
+import com.yallacam.cameramanager.CameraXManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

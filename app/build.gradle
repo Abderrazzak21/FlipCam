@@ -7,7 +7,7 @@ plugins {
 //keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
 //    signingConfigs {
-//        FC_Release {
+//        YC_Release {
 //            keyAlias keystoreProperties['keyAlias']
 //            keyPassword keystoreProperties['keyPassword']
 //            storeFile file(keystoreProperties['storeFile'])
@@ -16,7 +16,7 @@ android {
 //    }
     compileSdk 34
     defaultConfig {
-        applicationId "com.flipcam"
+        applicationId "com.yallacam"
         minSdk 23
         targetSdk 34
         versionCode 9
@@ -29,13 +29,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //signingConfig signingConfigs.FC_Release
+            //signingConfig signingConfigs.YC_Release
         }
     }
     flavorDimensions "1.2"
     productFlavors {
         free {
-            applicationId "com.flipcam"
+            applicationId "com.yallacam"
         }
     }
     compileOptions {
